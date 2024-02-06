@@ -3,11 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="EpicFlix web page to see films and movies"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="cos4h" />
+    <link rel="icon" type="image/icon" href="./public/media/film-solid.svg" />
+    <title>Epic Flix</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="preload"
+      href="./public/fonts/3e3cf2ee9aa3f174-s.p.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <h1>Proyecto de M2</h1>
-
+    <main>
+      <header>
+        <div class="logo">EpicFlix</div>
+        <nav>
+          <a>Home</a>
+          <a>Movies</a>
+          <a>Genres</a>
+          <a href="./cinemaHistory.html">Cinema History</a>
+          <a href="./aboutProject.html">About Project</a>
+        </nav>
+        <input type="search" placeholder="¿Que estás buscando?" />
+      </header>
+      <section class="latestMovies">
+        <div class="mainImage"></div>
+        <div class="carrusel"></div>
+      </section>
+      <section>Hello</section>
+      <section>Hello</section>
+      <section>Hello</section>
+      <section>Hello</section>
+      <section>Hello</section>
+    </main>
+    <footer>
+      <a href="https://cos4h.github.io/portfolio/" target="_blank"
+        >About Author</a
+      >
+      <a href="https://github.com/cos4h" target="_blank">Repositories</a>
+    </footer>
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
   </body>

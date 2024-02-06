@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "main";
+  src: url("./../public/fonts/3e3cf2ee9aa3f174-s.p.woff2");
+}
+
+:root {
+  font-family: "main";
+  font-size: 1em;
+  background: radial-gradient(
+    circle at top,
+    #202030 0%,
+    #202030 10%,
+    #0a0a0a 90%
+  );
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+
+header input {
+  border-radius: 0.3rem;
+  outline: none;
+  height: 40%;
+  background-color: black;
+  width: 15%;
+  color: white;
+  padding: 1rem;
+  border: 1px dotted gray;
+}
+header input::placeholder {
+  color: lightgrey;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.latestMovies {
+  height: 90vh;
+}
+
+main::before {
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url("./../public/media/mainImage.jpg");
+  position: absolute;
+  aspect-ratio: 29/15;
+  z-index: -1;
+  margin: auto;
+  background-size: cover;
+  height: 93%;
+  width: 90%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+}
+
+main {
+  width: 98vw;
+}
+
+.carrusel {
+  display: flex;
+  width: 88vw;
+  max-width: 88vw;
+  margin: 0 auto;
+  align-items: end;
+  height: 100%;
+  margin-left: 15%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 3%;
+}
+.movieCard {
+  border-radius: 0.5rem;
+  height: 15rem;
+}
+
+.movieCard:hover {
+  scale: 1.2;
+}
