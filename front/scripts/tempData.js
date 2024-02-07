@@ -27,7 +27,7 @@ const tempData = [
     genre: ["Action", "Adventure", "Drama", "Fantasy"],
     rate: 8.8,
     poster:
-      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+      "https://m.media-amazon.com/images/I/71BokibfVUL._AC_UL480_FMwebp_QL65_.jpg",
   },
   {
     title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -47,6 +47,6 @@ const tempData = [
     genre: ["Action", "Adventure", "Drama", "Fantasy"],
     rate: 8.8,
     poster:
-      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+      "https://m.media-amazon.com/images/I/51SGmduDetL._AC_UL480_FMwebp_QL65_.jpg",
   },
 ];

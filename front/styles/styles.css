@@ -26,6 +26,17 @@ header {
   top: 0;
   width: 100%;
   margin-top: 1rem;
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 100px;
+  z-index: 3;
+}
+
+@keyframes enhance-header {
+  to {
+    background-color: black;
+    opacity: 0.8;
+  }
 }
 
 header nav {
@@ -34,8 +45,20 @@ header nav {
   width: 35%;
 }
 
+header nav a:hover {
+  color: white;
+  cursor: pointer;
+}
+
 header nav a {
   text-decoration: none;
+  color: lightgray;
+  transition-duration: 200ms;
+  transition-property: background-color, scale;
+  transition-timing-function: cubic-bezier(0, 1.77, 0, 0.93);
+}
+
+header nav a.active {
   color: white;
 }
 
@@ -46,7 +69,7 @@ header input {
   background-color: black;
   width: 15%;
   color: white;
-  padding: 1rem;
+  padding: 1rem 0.3rem;
   border: 1px dotted gray;
 }
 header input::placeholder {
@@ -82,17 +105,25 @@ main {
   width: 98vw;
 }
 
+.latestMovies {
+  overflow-x: hidden;
+  margin: 0 5%;
+}
+
 .carrusel {
-  display: flex;
-  width: 88vw;
-  max-width: 88vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3;
+  width: 88%;
+  max-width: 88%;
   margin: 0 auto;
   align-items: end;
   height: 100%;
-  margin-left: 15%;
   flex-wrap: nowrap;
   overflow: hidden;
-  gap: 3%;
+  position: relative;
+  grid-gap: 3%;
+  justify-content: space-between;
 }
 .movieCard {
   border-radius: 0.5rem;
