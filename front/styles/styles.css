@@ -6,14 +6,16 @@
 :root {
   font-family: "main";
   font-size: 1em;
+  overflow-x: hidden;
+}
+
+body {
   background: radial-gradient(
     circle at top,
     #202030 0%,
     #202030 10%,
     #0a0a0a 90%
   );
-  color: white;
-  overflow-x: hidden;
 }
 
 header {
@@ -74,17 +76,15 @@ header input {
 }
 header input::placeholder {
   color: lightgrey;
+  color: white;
 }
 
 .logo {
   font-size: 3rem;
   font-weight: 600;
 }
-.latestMovies {
-  height: 90vh;
-}
 
-main::before {
+.main-poster::before {
   content: "";
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
     url("./../public/media/mainImage.jpg");
@@ -99,37 +99,79 @@ main::before {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0.5rem;
+  z-index: 1;
 }
 
-main {
-  width: 98vw;
+#myCarousel {
+  margin-top: 50px;
 }
 
-.latestMovies {
-  overflow-x: hidden;
-  margin: 0 5%;
-}
-
-.carrusel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 3;
-  width: 88%;
-  max-width: 88%;
-  margin: 0 auto;
-  align-items: end;
-  height: 100%;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  position: relative;
-  grid-gap: 3%;
-  justify-content: space-between;
-}
-.movieCard {
+.img-card {
+  max-height: 400px;
+  max-width: 200px;
   border-radius: 0.5rem;
-  height: 15rem;
+}
+.card-carousel {
+  padding: 10px;
 }
 
-.movieCard:hover {
-  scale: 1.2;
+.carousel-box {
+  left: 10% !important;
+}
+.center-carousel {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100% !important;
+  height: 95vh !important;
+  align-items: end;
+  margin-top: -50px !important;
+  margin-left: 5% !important;
+  z-index: 2 !important;
+}
+
+.control {
+  position: relative !important;
+  margin-bottom: 15%;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-item-next:not(.carousel-item-start) {
+    transform: translateX(25%) !important;
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start,
+  .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-25%) !important;
+  }
+
+  .carousel-item-next.carousel-item-start,
+  .active.carousel-item-end {
+    transform: translateX(0) !important;
+  }
+
+  .carousel-inner .carousel-item-prev,
+  .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-25%) !important;
+  }
 }

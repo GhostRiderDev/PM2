@@ -50,3 +50,5 @@ const tempData = [
       "https://m.media-amazon.com/images/I/51SGmduDetL._AC_UL480_FMwebp_QL65_.jpg",
   },
 ];
+
+module.exports = { tempData };
