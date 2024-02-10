@@ -32,7 +32,9 @@
   <body>
     <main class="main-poster">
       <header>
-        <div class="logo">EpicFlix</div>
+        <div class="logo">
+          <h1>EpicFlix</h1>
+        </div>
         <nav>
           <a href="#home">Home</a>
           <a>Movies</a>
@@ -42,6 +44,12 @@
         </nav>
         <input type="search" placeholder="&#128270; ¿Que estás buscando?" />
       </header>
+      <div class="navbar-phone">
+        Hola Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
+        enim, corrupti, sunt, nemo ullam quasi necessitatibus totam deserunt
+        accusantium obcaecati perspiciatis nostrum impedit ad excepturi
+        doloremque. Est laborum minima laudantium!
+      </div>
       <section
         id="myCarousel"
         class="carousel slide container center-carousel"
@@ -59,7 +67,7 @@
           ></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <div class="carousel-inner w-100 carousel-box"></div>
+        <div class="carousel-inner w-100 carousel-box" id="carousel-main"></div>
 
         <button
           class="carousel-control-next control"
@@ -71,8 +79,40 @@
           <span class="visually-hidden">Next</span>
         </button>
       </section>
-      <section>
+      <section class="carousel-section">
         <h2>Mejor valoradas</h2>
+        <div
+          id="carouselBest"
+          class="carousel slide container center-carousel expand"
+          data-bs-ride="carousel"
+        >
+          <button
+            class="carousel-control-prev control"
+            type="button"
+            data-bs-target="#carouselBest"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon control"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <div
+            class="carousel-inner w-100 carousel-box"
+            id="carousel-best"
+          ></div>
+
+          <button
+            class="carousel-control-next control"
+            type="button"
+            data-bs-target="#carouselBest"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </section>
     </main>
     <footer></footer>

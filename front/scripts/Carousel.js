@@ -1,21 +1,25 @@
 const { createCard } = require("./Card");
 
 function addCardsToSlider(data) {
-  const slider = document.querySelector(".carousel-inner");
-  let isFirstCard = true; // Flag para marcar la primera tarjeta como activa
-  data.forEach((movie) => {
-    const card = createCard(movie);
-    // Agregamos la clase 'active' solo al primer elemento
-    if (isFirstCard) {
-      card.classList.add("active");
-      isFirstCard = false;
-    }
-    slider.appendChild(card);
+  const sliderIds = ["carousel-best", "carousel-main"];
+  sliderIds.map((id) => {
+    console.log(id);
+    const slider = document.querySelector(`#${id}`);
+    let isFirstCard = true; // Flag para marcar la primera tarjeta como activa
+    data.forEach((movie) => {
+      const card = createCard(movie);
+      // Agregamos la clase 'active' solo al primer elemento
+      if (isFirstCard) {
+        card.classList.add("active");
+        isFirstCard = false;
+      }
+      slider.appendChild(card);
+    });
   });
 }
 
-function animateCarousel() {
-  $(".carousel .carousel-item").each(function () {
+function animateCarousel(selectorCSS) {
+  return $(selectorCSS).each(function () {
     var minPerSlide = 1;
     var next = $(this).next();
     if (!next.length) {
@@ -33,4 +37,7 @@ function animateCarousel() {
   });
 }
 
-module.exports = { addCardsToSlider, animateCarousel };
+module.exports = {
+  addCardsToSlider,
+  animateCarousel,
+};

@@ -103,7 +103,11 @@ header input::placeholder {
 }
 
 #myCarousel {
-  margin-top: 50px;
+  margin-top: 3rem;
+}
+
+#corouselBest {
+  margin: 0;
 }
 
 .img-card {
@@ -119,16 +123,45 @@ header input::placeholder {
   left: 10% !important;
 }
 .center-carousel {
-  display: flex !important;
+  display: flex;
   justify-content: space-between;
-  width: 100% !important;
-  height: 95vh !important;
+  width: 100%;
+  height: 95vh;
   align-items: end;
-  margin-top: -50px !important;
-  margin-left: 5% !important;
-  z-index: 2 !important;
+  margin-left: 5%;
+  margin-top: -3rem;
+  z-index: 2;
+}
+.expand.center-carousel {
+  z-index: 1;
+  height: 50vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  border: 0;
+  max-width: 90vw !important;
+}
+.carousel-section {
+  padding: 0 4.5%;
+}
+.expand .control {
+  margin-bottom: 0;
 }
 
+section {
+  color: white;
+}
+
+.expand .img-card {
+  max-height: 200px;
+}
+.expand .carousel-box {
+  left: 5% !important;
+  background-color: red;
+  align-self: center;
+  overflow: visible;
+}
 .control {
   position: relative !important;
   margin-bottom: 15%;
@@ -173,5 +206,20 @@ header input::placeholder {
   .carousel-inner .carousel-item-prev,
   .carousel-item-prev:not(.carousel-item-end) {
     transform: translateX(-25%) !important;
+  }
+}
+
+.navbar-phone {
+  display: none;
+  z-index: 5;
+}
+
+@media (max-width: 500px) {
+  header {
+    display: none;
+  }
+  .navbar-phone {
+    display: block;
+    color: white;
   }
 }
