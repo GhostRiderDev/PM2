@@ -16,6 +16,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
     <script
       type="text/javascript"
@@ -31,25 +36,40 @@
   </head>
   <body>
     <main class="main-poster">
-      <header>
-        <div class="logo">
-          <h1>EpicFlix</h1>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-danger"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Cos4h</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon text-white"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="contacts">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <nav>
-          <a href="#home">Home</a>
-          <a>Movies</a>
-          <a>Genres</a>
-          <a href="./cinemaHistory.html">Cinema History</a>
-          <a href="./aboutProject.html">About Project</a>
-        </nav>
-        <input type="search" placeholder="&#128270; ¿Que estás buscando?" />
-      </header>
-      <div class="navbar-phone">
-        Hola Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
-        enim, corrupti, sunt, nemo ullam quasi necessitatibus totam deserunt
-        accusantium obcaecati perspiciatis nostrum impedit ad excepturi
-        doloremque. Est laborum minima laudantium!
-      </div>
+      </nav>
       <section
         id="myCarousel"
         class="carousel slide container center-carousel"

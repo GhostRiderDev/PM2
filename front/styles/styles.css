@@ -18,7 +18,7 @@ body {
   );
 }
 
-header {
+/* header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -27,24 +27,29 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0;
   animation: enhance-header linear both;
   animation-timeline: scroll(root);
   animation-range: 0 100px;
   z-index: 3;
-}
+} */
 
 @keyframes enhance-header {
+  from {
+    background-color: black;
+    opacity: 1;
+  }
   to {
     background-color: black;
     opacity: 0.8;
   }
 }
 
-header nav {
+/* header nav {
   display: flex;
   justify-content: space-between;
-  width: 35%;
+  width: 100%;
+  padding-right: 5%;
 }
 
 header nav a:hover {
@@ -77,14 +82,14 @@ header input {
 header input::placeholder {
   color: lightgrey;
   color: white;
-}
+} */
 
-.logo {
+/* .logo {
   font-size: 3rem;
   font-weight: 600;
-}
+} */
 
-.main-poster::before {
+/* .main-poster::before {
   content: "";
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
     url("./../public/media/mainImage.jpg");
@@ -100,7 +105,7 @@ header input::placeholder {
   transform: translateX(-50%);
   border-radius: 0.5rem;
   z-index: 1;
-}
+} */
 
 #myCarousel {
   margin-top: 3rem;
@@ -212,14 +217,4 @@ section {
 .navbar-phone {
   display: none;
   z-index: 5;
-}
-
-@media (max-width: 500px) {
-  header {
-    display: none;
-  }
-  .navbar-phone {
-    display: block;
-    color: white;
-  }
 }
