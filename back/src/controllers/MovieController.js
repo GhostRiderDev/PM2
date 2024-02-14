@@ -1,5 +1,11 @@
+const {
+  getAllMovies,
+  addMovie,
+  findMoviesByTitle,
+} = require("./../services/MovieService");
+
 const getMovies = (req, res) => {
-  res.send("Proximamente estaran disponibles las peliculas");
+  res.send(getAllMovies());
 };
 
 module.exports = { getMovies };
