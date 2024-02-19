@@ -11,8 +11,8 @@ const areValidTypes = (
     typeof title !== "string" ||
     typeof year !== "number" ||
     typeof director !== "string" ||
-    typeof duration !== "number" ||
-    typeof genre !== "string" ||
+    typeof duration !== "string" ||
+    !Array.isArray(genre) ||
     typeof rate !== "number" ||
     typeof poster !== "string"
   ) {

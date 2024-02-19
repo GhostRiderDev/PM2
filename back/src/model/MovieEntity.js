@@ -4,6 +4,7 @@ class MovieEntity {
   constructor(title, year, director, duration, genre, rate, poster) {
     if (!areValidTypes(title, year, director, duration, genre, rate, poster)) {
       throw new Error("Invalid types");
+      // console.log("invalid types");
     }
     this.title = title;
     this.year = year;
@@ -14,3 +15,5 @@ class MovieEntity {
     this.poster = poster;
   }
 }
+
+module.exports = MovieEntity;
