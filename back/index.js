@@ -4,10 +4,12 @@ const PORT = 8888;
 
 connectToDB()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
+    const server = app.listen(PORT, () => {
+      console.log(
+        `Server running on http://127.0.0.1:${server.address().port}`
+      );
     });
   })
   .catch(() => {
-    console.error("server not could connect to DB");
+    console.error("Server could not connect to DB");
   });

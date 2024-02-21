@@ -1,17 +1,15 @@
-const { addCardsToSlider, animateCarousel } = require("./../Carousel");
-const { tempData } = require("./../tempData");
+const { addCardsToSlider } = require("./../Carousel");
 const axios = require("axios");
 
+const BASE_URL = "http://localhost:8888/movies";
 async function render() {
   const dataApi = await getMovies();
   addCardsToSlider(dataApi);
-  animateCarousel(".carousel .carousel-item");
-  animateCarousel(".expand .carousel-item");
 }
 
 const getMovies = async () => {
   try {
-    const response = await axios.get("http://localhost:8888/movies");
+    const response = await axios.get(BASE_URL);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -19,4 +17,14 @@ const getMovies = async () => {
   }
 };
 
-module.exports = { render };
+const addMovie = async (movieToPost) => {
+  try {
+    const response = await axios.post(BASE_URL, movieToPost);
+    return response.data;
+  } catch (error) {
+    console.log(error.message);
+    return error;
+  }
+};
+
+module.exports = { render, addMovie };
