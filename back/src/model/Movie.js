@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
 const MovieSchema = new mongoose.Schema({
-  title: String,
+  title: {
+    type: String,
+  },
   year: {
     type: Number,
     min: [1000, "Movie year not could be lower than 1000"],

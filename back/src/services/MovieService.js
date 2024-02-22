@@ -1,14 +1,8 @@
-const tempData = require("./../repository/tempData");
 const movieModel = require("./../model/Movie");
 
 const getAllMovies = async () => {
   // return array of all movies
   return await movieModel.find({});
-};
-
-const findMoviesByTitle = (param) => {
-  // return all movies that in its title contains param
-  return tempData.filter((movie) => movie.title.includes(param));
 };
 
 const addMovie = async (movieToSave) => {
@@ -19,4 +13,4 @@ const addMovie = async (movieToSave) => {
   return movieSaved;
 };
 
-module.exports = { getAllMovies, findMoviesByTitle, addMovie };
+module.exports = { getAllMovies, addMovie };

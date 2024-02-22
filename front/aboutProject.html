@@ -3,24 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/reset.css" />
+    <meta
+      name="description"
+      content="EpicFlix web page to see films and movies"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="cos4h" />
+    <link rel="icon" type="image/icon" href="./public/media/film-solid.svg" />
+    <title>Epic Flix</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="preload"
+      href="./public/fonts/3e3cf2ee9aa3f174-s.p.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    About Project
-
-    <header>
-      <div class="logo">
-        <h1>EpicFlix</h1>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a>Movies</a>
-        <a>Genres</a>
-        <a href="./cinemaHistory.html">Cinema History</a>
-        <a href="./aboutProject.html">About Project</a>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-dark header-top">
+        <div class="container-fluid">
+          <a class="navbar-brand logo light" href="./index.html">EpicFlix</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon light"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active light bg-black"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link light bg-black" href="./cinemaHistory.html"
+                  >Cinema History</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link light bg-black" href="./aboutProject.html"
+                  >About Project</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link light bg-black" href="./formMovie.html"
+                  >Add movie</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </header>
+    </main>
+    <div class="container light">
+      <h1 class="mt-5 mb-4 text-center">About This Project</h1>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p>
+            Welcome to this cinematic journey brought to life by Olvadis
+            Hernandez. This project represents a fusion of creativity and
+            technology, designed to provide users with an immersive experience
+            in the world of cinema.
+          </p>
+          <p>
+            Driven by a passion for movies and a commitment to delivering
+            quality content, this landing page offers a curated selection of
+            films available at your fingertips. Whether you're a casual
+            moviegoer or a dedicated cinephile, there's something here for
+            everyone.
+          </p>
+          <p>
+            With the seamless integration of Bootstrap, the layout and design of
+            this page are both elegant and responsive. This ensures that users
+            can enjoy the same captivating experience across various devices and
+            screen sizes.
+          </p>
+          <p>
+            As you explore the different sections of this page, from browsing
+            available movies to adding new ones, remember that this project is a
+            testament to the endless possibilities when creativity meets
+            technology.
+          </p>
+          <p>
+            Thank you for being a part of this journey. Sit back, relax, and
+            enjoy the magic of cinema!
+          </p>
+          <p>Sincerely,</p>
+          <p>Olvadis Hernandez</p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
   </body>
 </html>

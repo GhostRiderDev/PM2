@@ -1,11 +1,6 @@
-const { addCardsToSlider } = require("./../Carousel");
 const axios = require("axios");
 
 const BASE_URL = "http://localhost:8888/movies";
-async function render() {
-  const dataApi = await getMovies();
-  addCardsToSlider(dataApi);
-}
 
 const getMovies = async () => {
   try {
@@ -27,4 +22,4 @@ const addMovie = async (movieToPost) => {
   }
 };
 
-module.exports = { render, addMovie };
+module.exports = { addMovie, getMovies };

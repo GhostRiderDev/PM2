@@ -3,45 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/reset.css" />
+    <meta
+      name="description"
+      content="EpicFlix web page to see films and movies"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="cos4h" />
+    <link rel="icon" type="image/icon" href="./public/media/film-solid.svg" />
+    <title>Epic Flix</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="preload"
+      href="./public/fonts/3e3cf2ee9aa3f174-s.p.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    Historia del cine
-    <img src="./public/media/cam.webp" alt="camara" />
-    <img src="./public/media/cinta.png" alt="cinta" />
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+    <main>
+      <nav class="navbar navbar-expand-lg bg-dark header-top">
+        <div class="container-fluid">
+          <a class="navbar-brand logo light" href="./index.html">EpicFlix</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon light"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active light bg-black"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link light bg-black" href="./cinemaHistory.html"
+                  >Cinema History</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link light bg-black" href="./aboutProject.html"
+                  >About Project</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link light bg-black" href="./formMovie.html"
+                  >Add movie</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </main>
+    <div class="container light">
+      <h2>Cinema History</h2>
+      <img
+        src="./public/media/cam.webp"
+        alt="camara"
+        class="camera"
+        width="30%"
+      />
+      <div class="container container-tape">
+        <div class="content">
+          <h4>Silent Film Era</h4>
+          <img
+            src="https://i.gifer.com/25c8.gif"
+            alt="Silent Film Era"
+            loading="eager"
+          />
+          <p>
+            The silent film era, with classics like "The Birth of a Nation,"
+            marked cinema's early steps, exploring visual storytelling without
+            spoken dialogue.
+          </p>
+        </div>
+        <div class="content">
+          <h4>Golden Age of Hollywood</h4>
+          <img
+            src="https://i.gifer.com/origin/8b/8be41766ccc19b4afbe328409728eb64_w200.gif"
+            alt="Golden Age of Hollywood"
+            loading="lazy"
+          />
+          <p>
+            In the 1930s and 1940s, Hollywood flourished with iconic movies like
+            "Gone with the Wind".
+          </p>
+        </div>
+        <div class="content">
+          <h4>New Hollywood</h4>
+          <img
+            src="https://media2.giphy.com/media/l0Ex2enmcSlbj7ojK/giphy.gif?cid=6c09b95200y454jnwmo04crrw0vhvmb6np9n45ggz8r0s5v0&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+            alt="New Hollywood"
+            loading="lazy"
+          />
+          <p>
+            In the 1960s and 1970s, cinema underwent a radical shift with films
+            like "Easy Rider" and "The Godfather," challenging norms and
+            addressing social and political issues.
+          </p>
+        </div>
+        <div class="content">
+          <h4>Indie Film Movement</h4>
+          <img
+            src="https://vhx.imgix.net/indiecinema/assets/e6247275-8258-43a6-8b16-e9d9c1574eaa-e0759737.jpg?auto=format%2Ccompress&fit=crop&h=720&w=1280"
+            alt="Indie Film Movement"
+            loading="lazy"
+          />
+          <p>
+            The rise of indie film in later decades provided a platform for
+            alternative voices, with movies like "Clerks" and "Pulp Fiction"
+            gaining public and critical attention.
+          </p>
+        </div>
+        <div class="content">
+          <h4>Contemporary Cinema</h4>
+          <img
+            src="https://loveincorporated.blob.core.windows.net/contentimages/largesize/06d117ab-9c1c-49e8-9528-1858b0fba6c9-streaming_platforms.jpg"
+            alt="Contemporary Cinema"
+            loading="lazy"
+          />
+          <p>
+            In the digital age, cinema has evolved with technological advances
+            and distribution changes, leading to new storytelling forms and
+            experiences.
+          </p>
         </div>
       </div>
-    </nav>
+    </div>
+    <footer></footer>
   </body>
 </html>

@@ -7,6 +7,7 @@
   font-family: "main";
   font-size: 1em;
   overflow-x: hidden;
+  --display-poster: block;
 }
 
 body {
@@ -115,9 +116,11 @@ header input::placeholder {
   transform: translateX(-50%);
   border-radius: 0.5rem;
   z-index: 1;
+  display: var(--display-poster);
 }
 
 section {
+  margin-top: 2%;
   color: white;
 }
 
@@ -129,7 +132,7 @@ section {
 #formMovie {
   border: 2px solid lightgray;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
@@ -152,4 +155,85 @@ section {
   height: 10vh;
   width: 66vw;
   background-color: red !important;
+}
+
+.camera {
+  position: fixed;
+  top: 15%;
+}
+.content {
+  background-image: url("./../public/media/redTape.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 5% 25% 5% 12%;
+  position: relative;
+  right: 0;
+  margin-top: -3%;
+  width: 50vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.content img {
+  border-radius: 0.5rem;
+  width: 80%;
+}
+
+.container-tape {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: end;
+}
+
+.close-before {
+  display: none !important;
+  background-image: none !important;
+}
+
+#info-movie {
+  display: none;
+  height: 85vh;
+}
+
+.btn-exit {
+  color: white;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-left: 10%;
+  font-size: 3em;
+  height: 6rem;
+  width: 6rem;
+}
+
+.btn-exit:hover {
+  color: white;
+  background-color: rgb(77, 75, 75, 0.5);
+}
+
+.movie-full {
+  padding: 0 4%;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 60vw;
+  gap: 6%;
+}
+
+.movie-full h4 {
+  text-wrap: balance;
+  color: #ffd700;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.movie-full img {
+  border-radius: 0.5rem;
+}
+
+.movie-full p {
+  color: lightgray;
 }

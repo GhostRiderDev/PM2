@@ -1,8 +1,5 @@
-const {
-  getAllMovies,
-  addMovie,
-  findMoviesByTitle,
-} = require("./../services/MovieService");
+const { getAllMovies, addMovie } = require("./../services/MovieService");
+const { areValidTypes } = require("../services/ValidateMovie");
 
 const getMovies = async (req, res) => {
   try {
@@ -16,6 +13,9 @@ const getMovies = async (req, res) => {
 const createMovie = async (req, res) => {
   try {
     const { title, year, director, duration, genre, rate, poster } = req.body;
+    if (!areValidTypes(title, year, director, duration, genre, rate, poster)) {
+      throw new Error("Invalid Types");
+    }
     const response = await addMovie({
       title,
       year,

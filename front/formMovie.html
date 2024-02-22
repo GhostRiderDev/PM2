@@ -59,7 +59,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
   </head>
   <body>
-    <main class="main-poster">
+    <main>
       <nav class="navbar navbar-expand-lg bg-dark header-top">
         <div class="container-fluid">
           <a class="navbar-brand logo light" href="./index.html">EpicFlix</a>
@@ -104,59 +104,115 @@
           <!-- <input type="search" placeholder="&#128270; ¿Que estás buscando?" /> -->
         </div>
       </nav>
-      <section id="main-carousel">
-        <div class="owl-carousel owl-theme" id="main-movies"></div>
-      </section>
-      <section class="carousel-section" id="section-best">
-        <h2>Best Movies</h2>
-        <div class="container-fluid">
-          <div class="owl-carousel owl-theme" id="best-movies"></div>
-        </div>
-      </section>
     </main>
-    <section id="info-movie" class="light">
-      <button class="btn-exit" id="btnExit">⇐</button>
+    <section class="container w-75" id="formMovie">
+      <article>
+        <header>
+          <h2>Create New Movie</h2>
+        </header>
+        <form class="row g-3" id="formAddMovie">
+          <div class="col-md-12 col-sm-12">
+            <label for="title" class="form-label">Title:</label>
+            <input
+              id="title"
+              name="title"
+              required
+              placeholder="Aquaman Salvando el Checkpoint"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-8 col-sm-6">
+            <label for="director" class="form-label">Director:</label>
+            <input
+              id="director"
+              name="director"
+              required
+              placeholder="Olvadis Hernandez"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <label for="year" class="form-label">Year:</label>
+            <input
+              type="number"
+              min="1800"
+              max="2024"
+              step="1"
+              value="2024"
+              required
+              id="year"
+              name="year"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-2">
+            <label for="duration" class="form-label">Duration:</label>
+            <input
+              id="duration"
+              name="duration"
+              required
+              placeholder="3h 16min"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="genre" class="form-label">Genre:</label>
+            <select
+              id="genre"
+              name="genre"
+              class="selectpicker"
+              multiple
+              name="my_selection[]"
+              data-live-search="true"
+            >
+              <option value="Action">Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Drama">Drama</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="rate" class="form-label">Rate:</label>
+            <input
+              type="number"
+              min="1.0"
+              max="10.0"
+              step="0.1"
+              value="5.0"
+              required
+              id="rate"
+              name="rate"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-7">
+            <label for="posterLink" class="form-label">Poster:</label>
+            <input
+              type="url"
+              required
+              id="posterLink"
+              name="posterLink"
+              placeholder="http://media.png"
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary col-2 as-6 mx-auto">
+            Save
+          </button>
+          <button
+            type="reset"
+            class="btn btn-danger col-2 as-6 mx-auto light"
+            id="btnClearForm"
+          >
+            Clear
+          </button>
+        </form>
+      </article>
     </section>
     <footer></footer>
     <script>
-      $("#best-movies").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 3,
-          },
-          600: {
-            items: 5,
-          },
-          1000: {
-            items: 7,
-          },
-        },
-      });
-      $("#main-movies").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 2,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 4,
-          },
-        },
-      });
       $("select").selectpicker();
     </script>
     <script src="./build/bundle.js"></script>
